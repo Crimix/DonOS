@@ -1,2 +1,7 @@
+term.clear()
+term.setCursorPos(1,1)
+term.setTextColor(colors.yellow)
+print("DonOS V"..version)
 print("DonOS Commands")
+term.setTextColor(colors.white)
 print("Update, UpdateAll, commands")
