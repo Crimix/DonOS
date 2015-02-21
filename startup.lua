@@ -9,7 +9,6 @@ end
 
 function alias()
 	shell.setAlias("update","DonOS/update")
-	shell.setAlias("updateAll","DonOS/updateAll")
 	shell.setAlias("DonHelp","DonOS/commands")
 end
 
