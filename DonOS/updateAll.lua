@@ -10,7 +10,7 @@ end
 
 function makeList()
 	set("startup","startup.lua")
-	set("update","DonOS/update.lua")
+	set("DonOS/update","DonOS/update.lua")
 end
 
 function getCount()
