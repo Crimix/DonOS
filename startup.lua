@@ -12,8 +12,12 @@ function alias()
 	shell.setAlias("updateAll","DonOS/updateAll")
 end
 
-alias()
-start()
+if(pocket) then
+	alias()
+	start()
+else
+	shell.run("startup")
+end
 
 
 
