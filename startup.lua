@@ -2,7 +2,9 @@ version = 1
 function start()
   term.clear()
   term.setCursorPos(1,1)
-  term.write("DonOS V"..version)
+  term.setTextColor(colors.yellow)
+  print("DonOS V"..version)
+  term.setTextColor(colors.white)
 end
 
 start()

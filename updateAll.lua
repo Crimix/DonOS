@@ -31,6 +31,7 @@ function update()
 end
 
 makeList()
+getCount()
 update()
 print("Updating done "..j.." Out of "..i)
 		
