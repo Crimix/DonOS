@@ -10,6 +10,7 @@ end
 
 function makeList()
 	set("startup","startup.lua")
+	set("update","DonOS/update.lua")
 end
 
 function getCount()
@@ -21,6 +22,9 @@ end
 function update()
 	for name, data in pairs(list) do
 		file = http.get(baseUrl..data["url"])
+		if(fs.exists(name))then
+			fs.delete(name)
+		end
 		if(file ~= nil) then
 			f = fs.open(name,"w")
 			f.write(file.readAll())

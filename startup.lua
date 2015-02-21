@@ -7,8 +7,13 @@ function start()
   term.setTextColor(colors.white)
 end
 
+function alias()
+	shell.setAlias("update","DonOS/update")
+	shell.setAlias("updateAll","DonOS/updateAll")
+end
+
+alias()
 start()
-print("Tip: Run update to get the newest version of the updateList")
-print("Tip: Run updateAll to get the latests version of DonOS")
+
 
 
