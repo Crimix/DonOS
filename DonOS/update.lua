@@ -1,8 +1,8 @@
 baseUrl = "https://raw.githubusercontent.com/Crimix/DonOS/master/"
-url = "updateAll.lua"
-name = "updateAll"
+url = "DonOS/updateAll.lua"
+name = "DonOS/updateAll"
 
-file = http.get(baseUrl..data["url"])
+file = http.get(baseUrl..url)
 	if(fs.exists(name))then
 		fs.delete(name)
 	end
