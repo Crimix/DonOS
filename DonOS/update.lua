@@ -1,2 +1,2 @@
-shell.run("DonOS/update")
+shell.run("DonOS/updateList")
 shell.run("DonOS/updateAll")
