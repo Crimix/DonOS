@@ -11,6 +11,7 @@ end
 function makeList()
 	set("startup","startup.lua")
 	set("DonOS/update","DonOS/update.lua")
+	set("DonOS/commands","DonOS/commands.lua")
 end
 
 function getCount()
