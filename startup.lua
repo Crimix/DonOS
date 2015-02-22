@@ -21,9 +21,9 @@ function text()
 		local event, keyR = os.pullEvent("key")
 		if(keyR == keys.i) then
 			print("Reactor on")
-		elseif(keyR == key.o) then
+		elseif(keyR == keys.o) then
 			print("Reactor off")
-		elseif(keyR == key.b) then
+		elseif(keyR == keys.b) then
 			run = 0
 		end
 	end
@@ -34,9 +34,11 @@ function setKeys()
 end
 
 function main()
+	run = 1
 	local event, key1 = os.pullEvent("key")
-	print(key1.." + ?")
+	print(keys.getName(key1).." + ?")
 	local event, key2 = os.pullEvent("key")
+	start()
 	DonKeyAPI.run(key1,key2)
 end
 
