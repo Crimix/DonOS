@@ -33,16 +33,17 @@ end
 
 function update()
 	shell.run("DonOS/update")
+	sleep(2)
 end
 
 function newTab()
-	shell.openTab()
+	shell.run("bg ")
 end
 
 function setKeys()
 	DonKeyAPI.set("reactor",keys.leftCtrl,keys.r,text)
-	DonKeyAPI.set("reactor",keys.leftCtrl,keys.u,update)
-	DonKeyAPI.set("reactor",keys.leftCtrl,keys.n,newTab)
+	DonKeyAPI.set("update",keys.leftCtrl,keys.u,update)
+	DonKeyAPI.set("newTab",keys.leftCtrl,keys.n,newTab)
 end
 
 function main()
@@ -55,6 +56,7 @@ function main()
 end
 
 if(pocket) then
+	rednet.open("back")
 	alias()
 	start()
 	if(fs.exists("userstartup"))then
