@@ -1,4 +1,5 @@
 version = 1
+run = 1
 os.loadAPI("DonOS/api/DonKeyAPI")
 function start()
   term.clear()
@@ -15,11 +16,16 @@ end
 
 function text()
 	print("Reactor control")
+	print("i for on, o for off, b for back")
 	local event, keyR = os.pullEvent("key")
-	if(keyR == keys.r) then
-		print("Reactor on")
-	else
-		print("Reactor off")
+	while run = 1 do
+		if(keyR == keys.i) then
+			print("Reactor on")
+		elseif(keyR == key.o) then
+			print("Reactor off")
+		elseif(keyR == key.b) then
+			run = 0
+		end
 	end
 end
 
