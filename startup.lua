@@ -30,6 +30,7 @@ function main()
 		print(key1.." + ?")
 		term.clearLine()
 		DonKeyAPI.run(key1,key2)
+	end
 end
 
 if(pocket) then
