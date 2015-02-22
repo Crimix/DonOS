@@ -15,8 +15,8 @@ end
 
 function text()
 	print("Reactor control")
-	local evnet, keyR = os.pullEvent("key")
-	if(keyR == keys.i) then
+	local event, keyR = os.pullEvent("key")
+	if(keyR == keys.r) then
 		print("Reactor on")
 	else
 		print("Reactor off")
