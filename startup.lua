@@ -14,23 +14,23 @@ function alias()
 end
 
 function text()
-	print("works")
+	print("Reactor control")
+	local evnet, keyR = os.pullEvent("key")
+	if(keyR == keys.i) then
+		print("Reactor on")
+	elseif(keyR == keys.o) then
+		print("Reactor off")
+	end
 end
 
 function setKeys()
-	DonKeyAPI.set("reactor",Keys.leftCtrl,Keys.t,text)
+	DonKeyAPI.set("reactor",Keys.leftCtrl,Keys.r,text)
 end
 
 function main()
-	term.setCursorPos(24,1)
-	term.clearLine()
 	local event, key1 = os.pullEvent("key")
-	if(key1 == Keys.leftCtrl)then
-		local event key2 = os.pullEven("key")
-		print(key1.." + ?")
-		term.clearLine()
-		DonKeyAPI.run(key1,key2)
-	end
+	local event key2 = os.pullEven("key")
+	DonKeyAPI.run(key1,key2)
 end
 
 if(pocket) then
@@ -40,7 +40,10 @@ if(pocket) then
 		shell.run("userstartup")
 	end
 	setKeys()
-	main()
+	while true do
+		start()
+		main()
+	end
 else
 	shell.run("startup")
 end
