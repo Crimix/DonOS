@@ -24,7 +24,7 @@ function text()
 end
 
 function setKeys()
-	DonKeyAPI.set("reactor",Keys.leftCtrl,Keys.r,text)
+	DonKeyAPI.set("reactor",keys.leftCtrl,keys.r,text)
 end
 
 function main()
