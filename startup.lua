@@ -17,8 +17,8 @@ end
 function text()
 	print("Reactor control")
 	print("i for on, o for off, b for back")
-	local event, keyR = os.pullEvent("key")
-	while run = 1 do
+	while run == 1 do
+		local event, keyR = os.pullEvent("key")
 		if(keyR == keys.i) then
 			print("Reactor on")
 		elseif(keyR == key.o) then
@@ -35,6 +35,7 @@ end
 
 function main()
 	local event, key1 = os.pullEvent("key")
+	print(key1.." + ?")
 	local event, key2 = os.pullEvent("key")
 	DonKeyAPI.run(key1,key2)
 end
