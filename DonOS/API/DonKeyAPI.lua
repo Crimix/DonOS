@@ -10,7 +10,6 @@ function run(key1,key2)
 	for name, data in pairs(list) do
 		if(data["key1"] == key1) then
 			if(data["key2"] == key2) then
-			print(key1.." + "..key2)
 				data["func"]()
 			end
 		end

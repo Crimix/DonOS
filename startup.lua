@@ -29,7 +29,7 @@ end
 
 function main()
 	local event, key1 = os.pullEvent("key")
-	local event key2 = os.pullEven("key")
+	local event, key2 = os.pullEvent("key")
 	DonKeyAPI.run(key1,key2)
 end
 
