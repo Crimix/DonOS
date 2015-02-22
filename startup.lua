@@ -18,7 +18,7 @@ function text()
 	local evnet, keyR = os.pullEvent("key")
 	if(keyR == keys.i) then
 		print("Reactor on")
-	elseif(keyR == keys.o) then
+	else
 		print("Reactor off")
 	end
 end
