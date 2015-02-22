@@ -13,6 +13,7 @@ function makeList()
 	set("DonOS/update","DonOS/update.lua")
 	set("DonOS/commands","DonOS/commands.lua")
 	set("DonOS/updateList","DonOS/updateList.lua")
+	set("DonOS/api/DonKeyAPI","DonOS/api/DonKeyAPI.lua")
 end
 
 function getCount()
