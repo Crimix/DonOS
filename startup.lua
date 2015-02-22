@@ -36,7 +36,7 @@ end
 if(pocket) then
 	alias()
 	start()
-	if(fs.exsist("userstartup"))then
+	if(fs.exists("userstartup"))then
 		shell.run("userstartup")
 	end
 	setKeys()
