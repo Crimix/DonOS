@@ -2,7 +2,7 @@ local mon
 local list ={}
 
 function isMon(value)
-	if(value)
+	if(value) then
 		mon = mon
 	else
 		mom = term
