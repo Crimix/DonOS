@@ -13,7 +13,7 @@ function reactor()
 end
 function update()
 	shell.run("DonOS/update")
-	sleep(1)
+	sleep(2)
 	DonButtonAPI.toggle("Update")
 end
 
