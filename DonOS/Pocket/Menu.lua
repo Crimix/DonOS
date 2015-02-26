@@ -13,12 +13,13 @@ function reactor()
 end
 function update()
 	shell.run("DonOS/update")
+	sleep(1)
 	DonButtonAPI.toggle("Update")
 end
 
 function setButtons()
 	DonButtonAPI.set("Reactor",reactor,2,2,false,false)
-	DonButtonAPI.set("Update",
+	DonButtonAPI.set("Update",update,2,4,false,false)
 end
 
 function main()
