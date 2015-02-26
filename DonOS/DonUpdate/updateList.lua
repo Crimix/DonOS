@@ -10,4 +10,5 @@ f = fs.open(name,"w")
 f.write(file.readAll())
 f.close()
 
-print("Done refreshing Update List)
+print("Done refreshing Update List")
+
