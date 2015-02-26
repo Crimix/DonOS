@@ -11,7 +11,6 @@ end
 
 function main()
 	setButtons()
-	DonButtonAPI.isMon(false)
 	DonButtonAPI.update()
 	while true do
 		local event, x, y = os.pullEvent("mouse_click")

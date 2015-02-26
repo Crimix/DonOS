@@ -1,13 +1,5 @@
-mon = mon
+local mon = term
 local list ={}
-
-function isMon(value)
-	if(value) then
-		mon = mon
-	else
-		mom = term
-	end
-end
 
 function set(name,func,x,y,active,menu)
 	list[name] = {}
@@ -53,7 +45,7 @@ end
 function getButton(x,y)
 	for name, data in pairs(list) do
 		if(y == data["y"]) then
-			if(x <= data["x"] and x >= string.len(data["name"])) then
+			if(x >= data["x"] and x <= string.len(data["name"])) then
 				data["func"]()
 				toggle(name)
 			end
