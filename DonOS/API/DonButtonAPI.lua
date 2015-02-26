@@ -55,6 +55,7 @@ function getButton(x,y)
 		if(y == data["y"]) then
 			if(x <= data["x"] and x >= string.len(data["name"]) then
 				data["func"]()
+				toggle(name)
 			end
 		end
 	end

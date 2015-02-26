@@ -62,11 +62,12 @@ if(pocket) then
 	if(fs.exists("userstartup"))then
 		shell.run("userstartup")
 	end
-	setKeys()
-	while true do
-		start()
-		main()
-	end
+	--setKeys()
+	-- while true do
+		-- start()
+		-- main()
+	-- end
+	shell.run("DonOS/Pocket/menu")
 else
 	shell.run("startup")
 end
