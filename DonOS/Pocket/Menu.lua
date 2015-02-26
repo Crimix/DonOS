@@ -1,6 +1,6 @@
 os.loadAPI("DonOS/api/DonButtonAPI")
 
-local reactorState = false
+local reactorState = true
 
 function reactor()
 	if(reactorState) then
@@ -11,10 +11,14 @@ function reactor()
 		reactorState = true
 	end
 end
-
+function update()
+	shell.run("DonOS/update")
+	DonButtonAPI.toggle("Update")
+end
 
 function setButtons()
-	DonButtonAPI.set("Reactor",reactor,3,2,false,false)
+	DonButtonAPI.set("Reactor",reactor,2,2,false,false)
+	DonButtonAPI.set("Update",
 end
 
 function main()

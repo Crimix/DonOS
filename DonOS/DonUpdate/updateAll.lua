@@ -42,5 +42,5 @@ end
 makeList()
 getCount()
 update()
-print("Updating done "..j.." Out of "..i)
+--print("Updating done "..j.." Out of "..i)
 		
