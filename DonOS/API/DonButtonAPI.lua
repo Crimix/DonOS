@@ -27,9 +27,9 @@ function draw(color,data)
 end
 
 function toggle(name)
-	if(~list[name]["menu"]) then
+	if(not list[name]["menu"]) then
 		state = list[name]["active"]
-		list[name]["active"] = ~state
+		list[name]["active"] = not state
 		update()
 	else
 		x = 1
@@ -38,7 +38,7 @@ end
 
 function update()
 	for name, data in pairs(list) do
-		if(~data["menu"]) then
+		if(not data["menu"]) then
 			if(data["active"]) then
 				draw(colors.lime,data)
 			else
