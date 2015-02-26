@@ -1,4 +1,4 @@
-local mon
+mon = mon
 local list ={}
 
 function isMon(value)
