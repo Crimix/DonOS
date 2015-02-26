@@ -1,7 +1,15 @@
 os.loadAPI("DonOS/api/DonButtonAPI")
 
+local reactorState = false
+
 function reactor()
-	rednet.send(1,"turnOn")
+	if(reactorState) then
+		rednet.send(1,"turnOn")
+		reactorState = false
+	else
+		rednet.send(1,"turnOff")
+		reactorState = true
+	end
 end
 
 
@@ -13,7 +21,7 @@ function main()
 	setButtons()
 	DonButtonAPI.update()
 	while true do
-		local event, x, y = os.pullEvent("mouse_click")
+		local event, side, x, y = os.pullEvent("mouse_click")
 		DonButtonAPI.getButton(x,y)
 	end
 end
