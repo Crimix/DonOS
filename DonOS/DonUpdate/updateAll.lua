@@ -12,7 +12,7 @@ function makeList()
 	set("startup","startup.lua")
 	set("DonOS/update","DonOS/update.lua")
 	set("DonOS/commands","DonOS/commands.lua")
-	set("DonOS/updateList","DonOS/updateList.lua")
+	set("DonOS/DonUpdate/updateList","DonOS/DonUpdate/updateList.lua")
     set("DonOS/api/DonKeyAPI","DonOS/API/DonKeyAPI.lua")
 end
 
