@@ -15,7 +15,7 @@ end
 function net()
 	local id,msg,pro = rednet.receive()
 	if(id == DonRednetRef.pocket1 or id == DonRednetRef.pocket2 and msg == "toggle") then
-		if(br.getActive == true) then
+		if(br.getActive()) then
 			shell.run("DonOS/Computer/Reactor/turnOff")
 		else
 			shell.run("DonOS/Computer/Reactor/turnOn")

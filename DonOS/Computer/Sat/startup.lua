@@ -6,6 +6,7 @@ end
 function recive()
 	local id,msg,pro = rednet.receive()
 	data = textutils.unserialize(msg)
+	print("Recived command"..data["msg"])
 	send(data["rId"],msg)
 end
 

@@ -25,6 +25,7 @@ function refresh()
 			DonButtonAPI.setList(data["data"])
 		end
 	end
+	term.clear()
 end
 
 function tab()
