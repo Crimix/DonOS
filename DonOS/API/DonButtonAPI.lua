@@ -40,12 +40,12 @@ function toggle(name)
 	if(list[name]["type"] == "toggle") then
 		state = list[name]["active"]
 		list[name]["active"] = not state
+		sendList()
 	elseif(list[name]["type"] == "single") then
 		state = list[name]["active"]
 		list[name]["active"] = not state
 	end
 	update()
-	sendList()
 end
 
 function update()
