@@ -22,7 +22,7 @@ elseif(turtle) then
 else
 	if(DonType == "None") then
 		print("Master i don't know what to do")
-		print("PLz select a type for me")
+		print("Plz select a type for me")
 	else
 		shell.run("DonOS/Computer/"..DonType.."/startup")
 	end
