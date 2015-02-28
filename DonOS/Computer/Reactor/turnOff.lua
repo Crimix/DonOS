@@ -1,5 +1,4 @@
 print("Reactor Off")
-os.loadAPI("DonOS/Ref/DonWrapList")
-os.loadAPI("DonOS/Helpers/DonWrap")
+
 br = peripheral.wrap(DonWrap.wrap(DonWrapList.reactor))
 br.setActive(false)

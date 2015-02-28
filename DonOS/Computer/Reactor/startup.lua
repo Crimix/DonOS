@@ -1,7 +1,4 @@
 buffer = 10000000
-os.loadAPI("DonOS/Ref/DonRednetRef")
-os.loadAPI("DonOS/Ref/DonWrapList")
-os.loadAPI("DonOS/Helpers/DonWrap")
 br = peripheral.wrap(DonWrap.wrap(DonWrapList.reactor))
 rednet.open(DonWrap.wrap(DonWrapList.modem))
 print("Reactor Control V2 By DonF")

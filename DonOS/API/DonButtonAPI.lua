@@ -2,8 +2,6 @@ local mon = term
 local list ={}
 local listF ={}
 local dataList ={}
-os.loadAPI("DonOS/api/DonButtonAPI")
-os.loadAPI("DonOS/Ref/DonRednetRef")
 
 function setList(value)
 	list = value

@@ -1,6 +1,3 @@
-os.loadAPI("DonOS/Ref/DonRednetRef")
-os.loadAPI("DonOS/Ref/DonWrapList")
-os.loadAPI("DonOS/Helpers/DonWrap")
 rednet.open(DonWrap.wrap(DonWrapList.modem))
 print("Main V1 By DonF")
 local list ={}

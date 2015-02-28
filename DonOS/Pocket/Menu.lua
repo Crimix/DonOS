@@ -1,5 +1,3 @@
-os.loadAPI("DonOS/api/DonButtonAPI")
-os.loadAPI("DonOS/Ref/DonRednetRef")
 local reactorState = true
 local dataList ={}
 

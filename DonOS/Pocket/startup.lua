@@ -1,4 +1,3 @@
-os.loadAPI("DonOS/api/DonKeyAPI")
 function alias()
 	shell.setAlias("update","DonOS/update")
 	shell.setAlias("DonHelp","DonOS/commands")
