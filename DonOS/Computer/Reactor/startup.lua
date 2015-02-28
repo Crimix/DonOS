@@ -3,6 +3,7 @@ os.loadAPI("DonOS/Ref/DonRednetRef")
 os.loadAPI("DonOS/Ref/DonWrapList")
 os.loadAPI("DonOS/Helpers/DonWrap")
 br = DonWrap.wrap(DonWrapList.reactor)
+DonWrap.wrap(DonWrapList.modem)
 print("Reactor Control V2 By DonF")
 shell.run("DonOS/Computer/Reactor/turnOff")
 

@@ -38,7 +38,7 @@ function computer()
 end
 
 function helper()
-	set("DonOS/Helpers/DonWarp","DonOS/Helpers/DonWarp.lua")
+	set("DonOS/Helpers/DonWrap","DonOS/Helpers/DonWrap.lua")
 end
 
 function makeList()
