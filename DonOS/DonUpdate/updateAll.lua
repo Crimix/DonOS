@@ -16,6 +16,12 @@ function makeList()
     set("DonOS/api/DonKeyAPI","DonOS/API/DonKeyAPI.lua")
 	set("DonOS/api/DonButtonAPI","DonOS/API/DonButtonAPI.lua")
 	set("DonOS/Pocket/Menu","DonOS/Pocket/Menu.lua")
+	set("DonOS/Pocket/startup","DonOS/Pocket/startup.lua")
+	set("DonOS/Ref/DonRednetRef","DonOS/Ref/DonRednetRef.lua")
+	set("DonOS/Ref/DonTypeRef","DonOS/Ref/DonTypeRef.lua")
+	set("DonOS/Turtle/place","DonOS/Turtle/place.lua")
+	set("DonOS/Turtle/break","DonOS/Turtle/break.lua")
+	set("DonOS/Turtle/startup","DonOS/Turtle/startup.lua")
 end
 
 function getCount()

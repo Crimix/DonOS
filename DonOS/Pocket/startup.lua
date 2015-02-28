@@ -49,9 +49,6 @@ end
 	rednet.open("back")
 	alias()
 	start()
-	if(fs.exists("userstartup"))then
-		shell.run("userstartup")
-	end
 	--setKeys()
 	-- while true do
 		-- start()
