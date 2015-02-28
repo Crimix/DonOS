@@ -15,7 +15,7 @@ function reactor()
 	sleep(2)
 end
 
-function rednet()
+function net()
 	pocket1 = DonRednetRef.pocket1
 	pocket2 = DonRednetRef.pocket2
 	local id,msg,pro = rednet.receive(2)
@@ -24,5 +24,5 @@ function rednet()
 	end
 end
 
-parallel.waitForAny(reactor,rednet)
+parallel.waitForAny(reactor,net)
 
