@@ -35,6 +35,8 @@ function computer()
 	set("DonOS/Computer/Reactor/startup","DonOS/Computer/Reactor/startup.lua")
 	set("DonOS/Computer/Reactor/turnOn","DonOS/Computer/Reactor/turnOn.lua")
 	set("DonOS/Computer/Reactor/turnOff","DonOS/Computer/Reactor/turnOff.lua")
+	set("DonOS/Computer/Main/startup","DonOS/Computer/Main/startup.lua")
+	set("DonOS/Computer/Sat/startup","DonOS/Computer/Sat/startup.lua")
 end
 
 function helper()
