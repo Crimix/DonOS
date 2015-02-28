@@ -1,13 +1,7 @@
 local dataList ={}
 
 function reactor()
-	local active = DonButtonAPI.getReactorState()
-	if(not active) then
-		rednet.send(DonRednetRef.reactor,"turnOn")
-	else
-		rednet.send(DonRednetRef.reactor,"turnOff")
-		reactorState = true
-	end
+		rednet.send(DonRednetRef.reactor,"toggle")
 end
 function update()
 	shell.run("DonOS/update")
