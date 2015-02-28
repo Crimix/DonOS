@@ -62,6 +62,7 @@ function update()
 				draw(colors.cyan,data)
 			else
 				draw(colors.blue,data)
+			end
 		end
 	end
 end
