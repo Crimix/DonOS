@@ -10,10 +10,11 @@ function start()
 end
 
 if(fs.exists("userstartup"))then
-		shell.run("userstartup")
+	shell.run("userstartup")
 end
 
 start()
+shell.setAlias("update","DonOS/update")
 if(pocket) then
 	shell.run("DonOS/Pocket/startup")
 elseif(turtle) then
