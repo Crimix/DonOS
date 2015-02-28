@@ -1,14 +1,14 @@
 local mon = term
 local list ={}
 
-function set(name,func,x,y,active,menu)
+function set(name,func,x,y,active,type)
 	list[name] = {}
 	list[name]["name"]=name
 	list[name]["func"]=func
 	list[name]["x"]=x
 	list[name]["y"]=y
 	list[name]["active"]=active
-	list[name]["menu"]=menu
+	list[name]["type"]=type
 end
 
 function draw(color,data)
@@ -19,26 +19,25 @@ function draw(color,data)
 end
 
 function toggle(name)
-	if(not list[name]["menu"]) then
+	if(list[name]["type"] == "toggle") then
 		state = list[name]["active"]
 		list[name]["active"] = not state
-		update()
-	else
-		x = 1
 	end
 	update()
 end
 
 function update()
 	for name, data in pairs(list) do
-		if(not data["menu"]) then
+		if(data["type"] == "toggle") then
 			if(data["active"]) then
 				draw(colors.lime,data)
 			else
 				draw(colors.red,data)
 			end
-		else
+		elseif(data["type"] == "menu") then
 			draw(colors.yellow,data)
+		elseif(data["type"] == "single") then
+			draw(colors.blue,data)
 		end
 	end
 end

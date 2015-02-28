@@ -15,9 +15,14 @@ function update()
 	shell.run("DonOS/update")
 end
 
+function tab()
+	shell.run("fg ")
+end
+
 function setButtons()
-	DonButtonAPI.set("Reactor",reactor,2,2,false,false)
-	DonButtonAPI.set("Update",update,2,4,false,false)
+	DonButtonAPI.set("Reactor",reactor,2,2,false,"toggle")
+	DonButtonAPI.set("Update",update,2,4,false,"single")
+	DonButtonAPI.set("shell",tab,2,6,false,"single")
 end
 
 function main()
