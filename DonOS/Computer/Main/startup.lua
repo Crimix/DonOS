@@ -4,6 +4,7 @@ local list ={}
 local dataList ={}
 
 function refresh(value)
+	dataList ={}
 	id = value["sId"]
 	dataList["sId"] = DonRednetRef.main
 	dataList["rId"] = id
@@ -14,6 +15,7 @@ function refresh(value)
 end
 
 function setList(value)
+	list ={}
 	list = value["data"]
 end
 

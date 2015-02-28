@@ -8,6 +8,7 @@ function update()
 end
 
 function refresh()
+	dataListM ={}
 	term.clear()
 	term.setCursorPos(1,1)
 	print("Plz wait")

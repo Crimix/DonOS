@@ -9,6 +9,7 @@ function setList(value)
 end
 
 function sendList()
+	dataList = {}
 	dataList["sId"] = os.computerID()
 	dataList["rId"] = DonRednetRef.main
 	dataList["msg"] = "setList"
