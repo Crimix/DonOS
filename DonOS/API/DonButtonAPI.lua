@@ -1,5 +1,6 @@
 local mon = term
 local list ={}
+local listF ={}
 local dataList ={}
 os.loadAPI("DonOS/api/DonButtonAPI")
 os.loadAPI("DonOS/Ref/DonRednetRef")
@@ -20,8 +21,9 @@ end
 
 function set(name,func,x,y,active,type)
 	list[name] = {}
+	listF[name] = {}
 	list[name]["name"]=name
-	list[name]["func"]=func
+	listF[name]["func"]=func
 	list[name]["x"]=x
 	list[name]["y"]=y
 	list[name]["active"]=active
@@ -64,7 +66,7 @@ function getButton(x,y)
 	for name, data in pairs(list) do
 		if(y == data["y"]) then
 			if(x >= data["x"] and x <= string.len(data["name"])) then
-				data["func"]()
+				listF[name]["func"]()
 				toggle(name)
 			end
 		end
