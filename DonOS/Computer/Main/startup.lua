@@ -25,6 +25,8 @@ function recive()
 	data = textutils.unserialize(msg)
 	if(data["msg"] == "refresh")then
 		refresh(data)
+	elseif(data["msg"] == "setList")then
+		setList(data)
 	end
 end
 

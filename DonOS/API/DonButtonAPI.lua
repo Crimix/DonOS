@@ -1,9 +1,21 @@
 local mon = term
 local list ={}
+local dataList ={}
+os.loadAPI("DonOS/api/DonButtonAPI")
+os.loadAPI("DonOS/Ref/DonRednetRef")
 
 function setList(value)
 	list = value
 	update()
+end
+
+function sendList()
+	dataList["sId"] = os.computerID()
+	dataList["rId"] = DonRednetRef.main
+	dataList["msg"] = "setList"
+	dataList["data"] = list
+	msg = textutils.serialize(dataList)
+	rednet.send(DonRednetRef.sat,msg)
 end
 
 function set(name,func,x,y,active,type)
@@ -45,6 +57,7 @@ function update()
 			draw(colors.blue,data)
 		end
 	end
+	sendList()
 end
 
 function getButton(x,y)
