@@ -1,6 +1,11 @@
 local mon = term
 local list ={}
 
+function setList(value)
+	list = value
+	update()
+end
+
 function set(name,func,x,y,active,type)
 	list[name] = {}
 	list[name]["name"]=name
