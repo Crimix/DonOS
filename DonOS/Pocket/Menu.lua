@@ -41,8 +41,8 @@ function setButtons()
 	DonButtonAPI.set("Reactor",reactor,2,2,false,"toggle")
 	DonButtonAPI.set("Update",update,2,4,false,"single")
 	DonButtonAPI.set("Shell",tab,2,6,false,"single")
-	DonButtonAPI.set("Refresh",refresh,5,10,false,"single")
-	DonButtonAPI.set("Shutdown",sd,10,10,false,"single")
+	DonButtonAPI.set("Refresh",refresh,4,20,false,"single")
+	DonButtonAPI.set("Shutdown",sd,15,20,false,"single")
 end
 
 function main()
