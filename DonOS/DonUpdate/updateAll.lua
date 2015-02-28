@@ -12,7 +12,7 @@ end
 function ref()
 	set("DonOS/Ref/DonRednetRef","DonOS/Ref/DonRednetRef.lua")
 	set("DonOS/Ref/DonTypeRef","DonOS/Ref/DonTypeRef.lua")
-	set("DonOS/Ref/DonWarpList","DonOS/Ref/DonWarpList.lua")
+	set("DonOS/Ref/DonWrarpList","DonOS/Ref/DonWrapList.lua")
 end
 
 function api()
