@@ -41,6 +41,7 @@ function toggle(name)
 		list[name]["active"] = not state
 	end
 	update()
+	sendList()
 end
 
 function update()
@@ -57,7 +58,6 @@ function update()
 			draw(colors.blue,data)
 		end
 	end
-	sendList()
 end
 
 function getButton(x,y)
