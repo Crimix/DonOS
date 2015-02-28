@@ -32,7 +32,7 @@ function tab()
 end
 
 function sd()
-	os.shutdown()
+	shell.run("shutdown")
 end
 
 function setButtons()

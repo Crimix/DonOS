@@ -66,6 +66,7 @@ function getButton(x,y)
 			if(x >= data["x"] and x <= string.len(data["name"])) then
 				listF[name]["func"]()
 				toggle(name)
+				listF["Refresh"]["func"]()
 			end
 		end
 	end
