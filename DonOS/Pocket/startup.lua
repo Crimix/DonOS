@@ -48,7 +48,6 @@ end
 
 	rednet.open("back")
 	alias()
-	start()
 	--setKeys()
 	-- while true do
 		-- start()
