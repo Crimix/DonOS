@@ -1,4 +1,6 @@
+os.loadAPI("DonOS/Ref/DonTypeRef")
 version = 1
+DonType = DonTypeRef.none
 function start()
   term.clear()
   term.setCursorPos(1,1)
@@ -11,7 +13,11 @@ end
 if(pocket) then
 	shell.run("DonOS/Pocket/startup")
 elseif(computer)
-	shell.run("startup")
+	if(DonType == "None") then
+		shell.run("startup")
+	else
+		shell.run("DonOS/Computer/"..DonType.."startup")
+	end
 end
 
 

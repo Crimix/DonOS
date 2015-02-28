@@ -1,13 +1,13 @@
 os.loadAPI("DonOS/api/DonButtonAPI")
-
+os.loadAPI("DonOS/Ref/DonRednetRef")
 local reactorState = true
 
 function reactor()
 	if(reactorState) then
-		rednet.send(1,"turnOn")
+		rednet.send(DonRednetRef.reactor,"turnOn")
 		reactorState = false
 	else
-		rednet.send(1,"turnOff")
+		rednet.send(DonRednetRef.reactor,"turnOff")
 		reactorState = true
 	end
 end
