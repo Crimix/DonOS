@@ -8,6 +8,8 @@ function update()
 end
 
 function refresh()
+	term.clear()
+	print("Plz wait")
 	dataList["sId"] = os.computerID()
 	dataList["rId"] = DonRednetRef.main
 	dataList["msg"] = "refresh"
