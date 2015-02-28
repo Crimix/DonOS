@@ -1,10 +1,9 @@
-local reactorState = true
 local dataList ={}
 
 function reactor()
-	if(reactorState) then
+	local active = DonButtonAPI.getReactorState()
+	if(not active) then
 		rednet.send(DonRednetRef.reactor,"turnOn")
-		reactorState = false
 	else
 		rednet.send(DonRednetRef.reactor,"turnOff")
 		reactorState = true
@@ -31,21 +30,17 @@ function tab()
 	shell.run("fg ")
 end
 
-function sd()
-	shell.run("shutdown")
-end
-
 function setButtons()
 	DonButtonAPI.set("Reactor",reactor,2,2,false,"toggle")
 	DonButtonAPI.set("Update",update,2,4,false,"single")
 	DonButtonAPI.set("Shell",tab,2,6,false,"single")
 	DonButtonAPI.set("Refresh",refresh,4,20,false,"single")
-	DonButtonAPI.set("Shutdown",sd,15,20,false,"single")
 end
 
 function main()
 	setButtons()
 	DonButtonAPI.update()
+	refresh()
 	while true do
 		local event, side, x, y = os.pullEvent("mouse_click")
 		DonButtonAPI.getButton(x,y)

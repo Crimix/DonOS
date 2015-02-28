@@ -8,6 +8,10 @@ function setList(value)
 	update()
 end
 
+function getReactorState()
+	return list["Reactor"]["active"]
+end
+
 function sendList()
 	dataList["sId"] = DonRednetRef.pocket1
 	dataList["rId"] = DonRednetRef.main
@@ -39,6 +43,9 @@ function toggle(name)
 	if(list[name]["type"] == "toggle") then
 		state = list[name]["active"]
 		list[name]["active"] = not state
+	elseif(list[name]["type"] == "single") then
+		state = list[name]["active"]
+		list[name]["active"] = not state
 	end
 	update()
 	sendList()
@@ -55,7 +62,10 @@ function update()
 		elseif(data["type"] == "menu") then
 			draw(colors.yellow,data)
 		elseif(data["type"] == "single") then
-			draw(colors.blue,data)
+			if(data["active"]) then
+				draw(colors.cyan,data)
+			else
+				draw(colors.blue,data)
 		end
 	end
 end
@@ -64,8 +74,8 @@ function getButton(x,y)
 	for name, data in pairs(list) do
 		if(y == data["y"]) then
 			if(x >= data["x"] and x <= string.len(data["name"])) then
-				listF[name]["func"]()
 				toggle(name)
+				listF[name]["func"]()
 				listF["Refresh"]["func"]()
 			end
 		end
