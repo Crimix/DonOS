@@ -8,8 +8,8 @@ local dataList ={}
 
 function refresh(value)
 	id = value["sId"]
-	datalist["sId"] = DonRednetRef.main
-	datalist["rId"] = id
+	dataList["sId"] = DonRednetRef.main
+	dataList["rId"] = id
 	dataList["msg"] = "refresh"
 	dataList["data"] = list
 	rData = textutils.serialize(dataList)
