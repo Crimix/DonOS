@@ -1,3 +1,6 @@
+os.loadAPI("DonOS/Ref/DonWrapList")
+os.loadAPI("DonOS/Helpers/DonWrap")
+rednet.open(DonWrap.wrap(DonWrapList.modem))
 function send(id,value)
 	rednet.send(id,value)
 end

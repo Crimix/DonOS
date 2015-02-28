@@ -25,3 +25,8 @@ function recive()
 	data = textutils.unserialize(msg)
 	data["msg"](data)
 end
+
+while true do
+	recive()
+	sleep(1)
+end
