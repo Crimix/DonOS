@@ -74,9 +74,9 @@ function getButton(x,y)
 			if(x >= data["x"] and x <= string.len(data["name"])) then
 				toggle(name)
 				listF[name]["func"]()
-				--listF["Refresh"]["func"]()
-				if(list[name]["type"] == "single") then
-					toggle(name)
+				if(data	["type"] == "single") then
+					data["active"] = false
+					update()
 				end
 			end
 		end
