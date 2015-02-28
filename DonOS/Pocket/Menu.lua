@@ -18,15 +18,13 @@ function refresh()
 	msg = textutils.serialize(dataListM)
 	rednet.send(DonRednetRef.sat,msg)
 	local id,msg,pro = rednet.receive(10)
-	if(id == nil) then
-		print("error")
-	else
-		data = textutils.unserialize(msg)
-		if(data["msg"] == "refresh") then
-			DonButtonAPI.setList(data["data"])
-		end
+	data = textutils.unserialize(msg)
+	if(data["msg"] == "refresh") then
+		DonButtonAPI.setList(data["data"])
 	end
 	term.clear()
+	start()
+	DonButtonAPI.update()
 end
 
 function tab()
