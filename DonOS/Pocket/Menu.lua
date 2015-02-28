@@ -35,7 +35,7 @@ end
 
 function main()
 	setButtons()
-	refresh()
+	DonButtonAPI.update()
 	while true do
 		local event, side, x, y = os.pullEvent("mouse_click")
 		DonButtonAPI.getButton(x,y)
