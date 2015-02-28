@@ -15,14 +15,14 @@ function reactor()
 	sleep(2)
 end
 
--- function rednet()
-	-- pocket1 = DonRednetRef.pocket1
-	-- pocket2 = DonRednetRef.pocket2
-	-- local id,msg,pro = rednet.receive(2)
-	-- if ((id = pocket1) or (id = pocket2)) then
-		-- shell.run("DonOS/Computer/Reactor/"..msg)
-	-- end
--- end
+function rednet()
+	pocket1 = DonRednetRef.pocket1
+	pocket2 = DonRednetRef.pocket2
+	local id,msg,pro = rednet.receive(2)
+	if ((id = pocket1) or (id = pocket2)) then
+		shell.run("DonOS/Computer/Reactor/"..msg)
+	end
+end
 
---parallel.waitForAny(reactor,rednet)
+parallel.waitForAny(reactor,rednet)
 
