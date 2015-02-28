@@ -8,7 +8,7 @@ function wrap(value)
 			if(value == "modem" and Ptype == value) then
 				rednet.open(name)
 			elseif(Ptype == value) then
-				return peripheral.wrap(name)
+				return name
 			else
 				return nil
 			end
