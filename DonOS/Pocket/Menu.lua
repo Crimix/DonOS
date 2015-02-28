@@ -17,8 +17,8 @@ function update()
 end
 
 function refresh()
-	dataList["sId"] = os.computerID
-	dataList["sId"] = DonRednetRef.main
+	dataList["sId"] = os.computerID()
+	dataList["rId"] = DonRednetRef.main
 	dataList["msg"] = "refresh"
 	msg = textutils.serialize(dataList)
 	rednet.send(DonRednetRef.sat,msg)

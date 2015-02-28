@@ -23,7 +23,9 @@ end
 function recive()
 	local id,msg,pro = rednet.receive()
 	data = textutils.unserialize(msg)
-	data["msg"](data)
+	if(data["msg"] == "refresh")then
+		refresh(data)
+	end
 end
 
 while true do
