@@ -8,10 +8,6 @@ function setList(value)
 	update()
 end
 
-function getReactorState()
-	return list["Reactor"]["active"]
-end
-
 function sendList()
 	dataList["sId"] = DonRednetRef.pocket1
 	dataList["rId"] = DonRednetRef.main

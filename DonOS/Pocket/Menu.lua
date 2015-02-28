@@ -1,7 +1,7 @@
 local dataList ={}
 
 function reactor()
-		rednet.send(DonRednetRef.reactor,"toggle")
+	rednet.send(DonRednetRef.reactor,"toggle")
 end
 function update()
 	shell.run("DonOS/update")
@@ -33,7 +33,6 @@ end
 
 function main()
 	setButtons()
-	DonButtonAPI.update()
 	refresh()
 	while true do
 		local event, side, x, y = os.pullEvent("mouse_click")
