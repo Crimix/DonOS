@@ -24,7 +24,7 @@ else
 		print("Master i don't know what to do")
 		print("PLz select a type for me")
 	else
-		shell.run("DonOS/Computer/"..DonType.."startup")
+		shell.run("DonOS/Computer/"..DonType.."/startup")
 	end
 end
 
