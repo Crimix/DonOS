@@ -18,8 +18,8 @@ end
 function net()
 	pocket1 = DonRednetRef.pocket1
 	pocket2 = DonRednetRef.pocket2
-	local id,msg,pro = rednet.receive(2)
-	if ((id = pocket1) or (id = pocket2)) then
+	local id,msg,pro = rednet.receive()
+	if(id = pocket1 or id = pocket2) then
 		shell.run("DonOS/Computer/Reactor/"..msg)
 	end
 end
