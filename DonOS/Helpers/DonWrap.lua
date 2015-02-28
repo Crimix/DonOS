@@ -5,7 +5,7 @@ function wrap(value)
 		if(names[i] ~= nil) then
 			name = names[i]
 			Ptype = peripheral.getType(name)
-			if(value == "modem") then
+			if(value == "modem" and Ptype == value) then
 				rednet.open(name)
 			elseif(Ptype == value) then
 				return peripheral.wrap(name)
