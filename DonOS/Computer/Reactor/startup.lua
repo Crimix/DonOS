@@ -16,13 +16,12 @@ function reactor()
 end
 
 function net()
-	--pocket1 = DonRednetRef.pocket1
-	--pocket2 = DonRednetRef.pocket2
 	local id,msg,pro = rednet.receive()
-	if(id = 0 or id = 4) then
+	if(id == DonRednetRef.pocket1 or id == DonRednetRef.pocket2) then
 		shell.run("DonOS/Computer/Reactor/"..msg)
 	end
 end
 
-parallel.waitForAny(reactor,net)
-
+while true do
+	parallel.waitForAny(reactor,net)
+end
