@@ -1,4 +1,4 @@
-local dataList ={}
+local dataListM ={}
 
 function reactor()
 	rednet.send(DonRednetRef.reactor,"toggle")
@@ -11,10 +11,10 @@ function refresh()
 	term.clear()
 	term.setCursorPos(1,1)
 	print("Plz wait")
-	dataList["sId"] = os.computerID()
-	dataList["rId"] = DonRednetRef.main
-	dataList["msg"] = "refresh"
-	msg = textutils.serialize(dataList)
+	dataListM["sId"] = os.computerID()
+	dataListM["rId"] = DonRednetRef.main
+	dataListM["msg"] = "refresh"
+	msg = textutils.serialize(dataListM)
 	rednet.send(DonRednetRef.sat,msg)
 	local id,msg,pro = rednet.receive(10)
 	if(id == nil) then
