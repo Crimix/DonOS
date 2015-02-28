@@ -11,7 +11,7 @@ function refresh(value)
 	dataList["msg"] = "refresh"
 	dataList["data"] = list
 	rData = textutils.serialize(dataList)
-	rednet.send(id,rData)
+	rednet.send(DonRednetRef.sat,rData)
 end
 
 function setList(value)
