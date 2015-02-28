@@ -9,16 +9,21 @@ end
 
 function refresh()
 	term.clear()
+	term.setCursorPos(1,1)
 	print("Plz wait")
 	dataList["sId"] = os.computerID()
 	dataList["rId"] = DonRednetRef.main
 	dataList["msg"] = "refresh"
 	msg = textutils.serialize(dataList)
 	rednet.send(DonRednetRef.sat,msg)
-	local id,msg,pro = rednet.receive()
-	data = textutils.unserialize(msg)
-	if(data["msg"] == "refresh") then
-		DonButtonAPI.setList(data["data"])
+	local id,msg,pro = rednet.receive(10)
+	if(id == nil) then
+		print("error")
+	else
+		data = textutils.unserialize(msg)
+		if(data["msg"] == "refresh") then
+			DonButtonAPI.setList(data["data"])
+		end
 	end
 end
 
