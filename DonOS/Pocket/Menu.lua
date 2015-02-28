@@ -17,7 +17,7 @@ function refresh()
 	dataListM["msg"] = "refresh"
 	msg = textutils.serialize(dataListM)
 	rednet.send(DonRednetRef.sat,msg)
-	local id,msg,pro = rednet.receive(10)
+	local id,msg,pro = rednet.receive()
 	data = textutils.unserialize(msg)
 	if(data["msg"] == "refresh") then
 		DonButtonAPI.setList(data["data"])

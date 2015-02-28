@@ -4,7 +4,7 @@ os.loadAPI("DonOS/Ref/DonTypeRef")
 os.loadAPI("DonOS/Ref/DonWrapList")
 os.loadAPI("DonOS/Helpers/DonWrap")
 os.loadAPI("DonOS/api/DonKeyAPI")
-version = 1.7
+version = 1.8
 DonType = DonTypeRef.none
 function start()
   term.clear()

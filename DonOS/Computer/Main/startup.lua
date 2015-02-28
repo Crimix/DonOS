@@ -31,5 +31,4 @@ end
 
 while true do
 	recive()
-	sleep(1)
 end
