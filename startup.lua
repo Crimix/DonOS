@@ -17,7 +17,8 @@ if(pocket) then
 	shell.run("DonOS/Pocket/startup")
 elseif(computer) then
 	if(DonType == "None") then
-		shell.run("startup")
+		print("Master i don't know what to do")
+		print("PLz select a type for me")
 	else
 		shell.run("DonOS/Computer/"..DonType.."startup")
 	end

@@ -26,6 +26,7 @@ function toggle(name)
 	else
 		x = 1
 	end
+	update()
 end
 
 function update()
