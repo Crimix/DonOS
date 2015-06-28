@@ -14,8 +14,8 @@ end
 
 function net()
 	local id,msg,pro = rednet.receive()
-	print("Recived command "..data["msg"])
-	if(msg == "toggle") then
+	data = textutils.unserialize(msg)
+	if(data["msg"] == "toggle") then
 		if(br.getActive()) then
 			shell.run("DonOS/Computer/Reactor/turnOff")
 		else
