@@ -37,6 +37,7 @@ function recive()
 			rednet.send(id,"msg")
 		else
 			saveID(data["rId"],data["sId"])
+		end
 	else
 		rednet.send(dataList[data["rId"]]["id"],msg)
 	end
