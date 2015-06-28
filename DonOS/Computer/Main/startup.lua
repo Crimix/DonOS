@@ -9,7 +9,7 @@ function refresh(value)
 	id = value["sId"]
 	dataList["sId"] = os.computerID()
 	dataList["rId"] = id
-	dataList["msg"] = "refresh"
+	dataList["msg"] = "refreshMain"
 	dataList["data"] = list
 	rData = textutils.serialize(dataList)
 	rednet.send(satId,rData)
