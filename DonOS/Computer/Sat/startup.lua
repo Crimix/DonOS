@@ -33,7 +33,7 @@ function recive()
 	data = textutils.unserialize(msg)
 	print("Recived command "..data["msg"])
 	if(data["msg"] == "type")then
-		if(dataList["rId"] == "pocket")then
+		if(data["rId"] == "pocket")then
 			rednet.send(id,"msg")
 		else
 			saveID(data["rId"],data["sId"])
