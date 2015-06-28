@@ -26,7 +26,7 @@ elseif(turtle) then
 	shell.run("DonOS/Turtle/startup")
 else
 	if(fs.exists("temp/type")) then
-		file = fs.open("temp/type","w")
+		file = fs.open("temp/type","r")
 		DonType = file.readLine()
 		file.close()
 		if(fs.exists("DonOS/Computer/"..DonType.."/startup"))then

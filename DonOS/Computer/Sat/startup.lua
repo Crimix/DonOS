@@ -5,7 +5,7 @@ local dataList = {}
 
 function readIDS()
 	if(fs.exists("temp/ids")) then
-		file = fs.open("temp/ids","w")
+		file = fs.open("temp/ids","r")
 		dataList = textutils.unserialize(file.readAll())
 		file.close()
 	end
