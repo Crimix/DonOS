@@ -38,7 +38,7 @@ function recive()
 		else
 			saveID(data["rId"],data["sId"])
 		end
-	elseif(data["msg"] == "refreshMain)then
+	elseif(data["msg"] == "refreshMain")then
 		rednet.send(data["rId"],msg)
 	else
 		rednet.send(dataList[data["rId"]]["id"],msg)
