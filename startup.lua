@@ -39,7 +39,7 @@ else
 		print("Plz select a type for me")
 		file = fs.open("temp/type","w")
 		local input = read()
-		file.write(input)
+		file.writeLine(input)
 		file.close()
 	end
 end
