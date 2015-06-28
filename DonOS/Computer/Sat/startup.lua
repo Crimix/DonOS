@@ -16,7 +16,7 @@ function saveIDS()
 		fs.delete("temp/ids")
 	end
 	file = fs.open("temp/ids","w")
-	file.write(textutils.serialize(dataList)
+	file.write(textutils.serialize(dataList))
 	file.close()
 	end
 end	
