@@ -27,9 +27,9 @@ elseif(turtle) then
 else
 	if(fs.exists("temp/type")) then
 		file = fs.open("temp/type","w")
-		DonType =file.readLine()
+		DonType = file.readLine()
 		file.close()
-		if(fs.exists("DonOS/Computer/"..DonType.."/startup")then
+		if(fs.exists("DonOS/Computer/"..DonType.."/startup"))then
 			shell.run("DonOS/Computer/"..DonType.."/startup")
 		else
 			print("Type is not correct")
