@@ -26,7 +26,6 @@ end
 
 function register()
 	dataList ={}
-	id = value["sId"]
 	dataList["sId"] = os.computerID()
 	dataList["rId"] = "reactor"
 	dataList["msg"] = "type"

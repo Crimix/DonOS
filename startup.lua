@@ -1,6 +1,5 @@
 os.loadAPI("DonOS/api/DonButtonAPI")
 os.loadAPI("DonOS/Ref/DonRednetRef")
-os.loadAPI("DonOS/Ref/DonTypeRef")
 os.loadAPI("DonOS/Ref/DonWrapList")
 os.loadAPI("DonOS/Helpers/DonWrap")
 os.loadAPI("DonOS/api/DonKeyAPI")
