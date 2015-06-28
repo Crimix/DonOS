@@ -1,32 +1,8 @@
+local satId
+
 function alias()
 	shell.setAlias("update","DonOS/update")
 	shell.setAlias("DonHelp","DonOS/commands")
-end
-
-function main()
-	run = 1
-	local event, key1 = os.pullEvent("key")
-	print(keys.getName(key1).." + ?")
-	local event, key2 = os.pullEvent("key")
-	start()
-	DonKeyAPI.run(key1,key2)
-end
-
-function text()
-	print("Reactor control")
-	print("i for on, o for off, b for back")
-	while run == 1 do
-		local event, keyR = os.pullEvent("key")
-		if(keyR == keys.i) then
-			print("Reactor on")
-			rednet.send(1,"turnOn")
-		elseif(keyR == keys.o) then
-			print("Reactor off")
-			rednet.send(1,"turnOff")
-		elseif(keyR == keys.b) then
-			run = 0
-		end
-	end
 end
 
 
@@ -47,10 +23,43 @@ end
 
 rednet.open("back")
 alias()
---setKeys()
--- while true do
-	-- start()
-	-- main()
--- end
+
+
+function readIDS()
+	if(fs.exists("temp/satId")) then
+		file = fs.open("temp/satId","r")
+		satId = tonumber(file.readLine())
+		file.close()
+	end
+end
+
+function saveIDS()
+	if(fs.exists("temp/satId")) then
+		fs.delete("temp/satId")
+	end
+	file = fs.open("temp/satId","w")
+	file.writeLine(satId)
+	file.close()
+end	
+
+
+function register()
+	dataList ={}
+	dataList["sId"] = os.computerID()
+	dataList["rId"] = "pocket"
+	dataList["msg"] = "type"
+	rData = textutils.serialize(dataList)
+	rednet.broadcast(rData)
+end
+
+if(fs.exists("temp/id")) then
+	readIDS()
+else
+	register()
+	local id,msg,pro = rednet.receive()
+	satId = id
+	saveIDS()
+	fs.open("temp/id","w")
+end
 
 shell.run("DonOS/Pocket/menu")

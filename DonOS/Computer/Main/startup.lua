@@ -2,6 +2,7 @@ rednet.open(DonWrap.wrap(DonWrapList.modem))
 print("Main V1 By DonF")
 local list ={}
 local dataList ={}
+local satId
 
 function refresh(value)
 	dataList ={}
@@ -11,7 +12,7 @@ function refresh(value)
 	dataList["msg"] = "refresh"
 	dataList["data"] = list
 	rData = textutils.serialize(dataList)
-	rednet.send(DonRednetRef.sat,rData)
+	rednet.send(satId,rData)
 end
 
 function setList(value)
@@ -21,6 +22,7 @@ end
 
 function recive()
 	local id,msg,pro = rednet.receive()
+	satId = id
 	data = textutils.unserialize(msg)
 	if(data["msg"] == "refresh")then
 		refresh(data)
