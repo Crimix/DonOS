@@ -1,12 +1,13 @@
 local dataListM ={}
+local dataList ={}
 local satId
 
 function reactor()
-	dataListM ={}
-	dataListM["sId"] = os.computerID()
-	dataListM["rId"] = "reactor"
-	dataListM["msg"] = "toggle"
-	msg = textutils.serialize(dataListM)
+	dataList ={}
+	dataList["sId"] = os.computerID()
+	dataList["rId"] = "reactor"
+	dataList["msg"] = "toggle"
+	msg = textutils.serialize(dataList)
 	rednet.send(satId,msg)
 end
 function update()
