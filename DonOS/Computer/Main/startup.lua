@@ -37,7 +37,7 @@ function register()
 	dataList["rId"] = "main"
 	dataList["msg"] = "type"
 	rData = textutils.serialize(dataList)
-	rednet.send(DonRednetRef.sat,rData)
+	rednet.broadcast(rData)
 end
 
 

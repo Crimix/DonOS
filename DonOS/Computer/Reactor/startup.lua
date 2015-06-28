@@ -14,7 +14,7 @@ end
 
 function net()
 	local id,msg,pro = rednet.receive()
-	if(id == DonRednetRef.pocket1 or id == DonRednetRef.pocket2 and msg == "toggle") then
+	if(msg == "toggle") then
 		if(br.getActive()) then
 			shell.run("DonOS/Computer/Reactor/turnOff")
 		else
@@ -30,7 +30,7 @@ function register()
 	dataList["rId"] = "reactor"
 	dataList["msg"] = "type"
 	rData = textutils.serialize(dataList)
-	rednet.send(DonRednetRef.sat,rData)
+	rednet.broadcast(rData)
 end
 
 
