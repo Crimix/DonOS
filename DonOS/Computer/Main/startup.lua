@@ -6,7 +6,7 @@ local dataList ={}
 function refresh(value)
 	dataList ={}
 	id = value["sId"]
-	dataList["sId"] = DonRednetRef.main
+	dataList["sId"] = os.computerID()
 	dataList["rId"] = id
 	dataList["msg"] = "refresh"
 	dataList["data"] = list
@@ -29,6 +29,24 @@ function recive()
 	end
 end
 
+
+
+function register()
+	dataList ={}
+	id = value["sId"]
+	dataList["sId"] = os.computerID()
+	dataList["rId"] = "main"
+	dataList["msg"] = "type"
+	rData = textutils.serialize(dataList)
+	rednet.send(DonRednetRef.sat,rData)
+end
+
+
+if(fs.exists("temp/id")) then
+else
+	register()
+	fs.open("temp/id","w")
+end
 while true do
 	recive()
 end

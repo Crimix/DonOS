@@ -1,7 +1,12 @@
 local dataListM ={}
 
 function reactor()
-	rednet.send(DonRednetRef.reactor,"toggle")
+	dataListM ={}
+	dataListM["sId"] = os.computerID()
+	dataListM["rId"] = "reactor"
+	dataListM["msg"] = "toggle"
+	msg = textutils.serialize(dataListM)
+	rednet.send(DonRednetRef.sat,msg)
 end
 function update()
 	shell.run("DonOS/update")
@@ -13,7 +18,7 @@ function refresh()
 	term.setCursorPos(1,1)
 	print("Plz wait")
 	dataListM["sId"] = os.computerID()
-	dataListM["rId"] = DonRednetRef.main
+	dataListM["rId"] = "main"
 	dataListM["msg"] = "refresh"
 	msg = textutils.serialize(dataListM)
 	rednet.send(DonRednetRef.sat,msg)

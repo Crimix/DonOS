@@ -4,8 +4,8 @@ os.loadAPI("DonOS/Ref/DonTypeRef")
 os.loadAPI("DonOS/Ref/DonWrapList")
 os.loadAPI("DonOS/Helpers/DonWrap")
 os.loadAPI("DonOS/api/DonKeyAPI")
-version = 1.10
-DonType = DonTypeRef.none
+version = 1.11
+DonType = "None"
 function start()
   term.clear()
   term.setCursorPos(1,1)
@@ -25,11 +25,22 @@ if(pocket) then
 elseif(turtle) then
 	shell.run("DonOS/Turtle/startup")
 else
-	if(DonType == "None") then
+	if(fs.exists("temp/type")) then
+		file = fs.open("temp/type","w")
+		DonType =file.readLine()
+		file.close()
+		if(fs.exists("DonOS/Computer/"..DonType.."/startup")then
+			shell.run("DonOS/Computer/"..DonType.."/startup")
+		else
+			print("Type is not correct")
+		end
+	else
 		print("Master i don't know what to do")
 		print("Plz select a type for me")
-	else
-		shell.run("DonOS/Computer/"..DonType.."/startup")
+		file = fs.open("temp/type","w")
+		local input = read()
+		file.write(input)
+		file.close()
 	end
 end
 

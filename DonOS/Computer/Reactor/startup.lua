@@ -23,6 +23,23 @@ function net()
 	end
 end
 
+
+function register()
+	dataList ={}
+	id = value["sId"]
+	dataList["sId"] = os.computerID()
+	dataList["rId"] = "reactor"
+	dataList["msg"] = "type"
+	rData = textutils.serialize(dataList)
+	rednet.send(DonRednetRef.sat,rData)
+end
+
+
+if(fs.exists("temp/id")) then
+else
+	register()
+	fs.open("temp/id","w")
+end
 while true do
 	parallel.waitForAny(reactor,net)
 end

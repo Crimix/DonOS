@@ -45,11 +45,12 @@ function setKeys()
 	DonKeyAPI.set("newTab",keys.leftCtrl,keys.n,newTab)
 end
 
-	rednet.open("back")
-	alias()
-	--setKeys()
-	-- while true do
-		-- start()
-		-- main()
-	-- end
-	shell.run("DonOS/Pocket/menu")
+rednet.open("back")
+alias()
+--setKeys()
+-- while true do
+	-- start()
+	-- main()
+-- end
+
+shell.run("DonOS/Pocket/menu")
