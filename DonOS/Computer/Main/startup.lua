@@ -45,7 +45,8 @@ end
 if(fs.exists("temp/id")) then
 else
 	register()
-	fs.open("temp/id","w")
+	file = fs.open("temp/id","w")
+	file.close()
 end
 while true do
 	recive()

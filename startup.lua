@@ -5,7 +5,6 @@ os.loadAPI("DonOS/Ref/DonWrapList")
 os.loadAPI("DonOS/Helpers/DonWrap")
 os.loadAPI("DonOS/api/DonKeyAPI")
 version = 1.11
-DonType = "None"
 function start()
   term.clear()
   term.setCursorPos(1,1)
