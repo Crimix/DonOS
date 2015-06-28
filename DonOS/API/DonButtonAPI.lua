@@ -11,11 +11,11 @@ end
 function sendList()
 	dataList = {}
 	dataList["sId"] = os.computerID()
-	dataList["rId"] = DonRednetRef.main
+	dataList["rId"] = "main"
 	dataList["msg"] = "setList"
 	dataList["data"] = list
 	msg = textutils.serialize(dataList)
-	rednet.send(DonRednetRef.sat,msg)
+	rednet.broadcast(msg)
 end
 
 function set(name,func,x,y,active,type)
