@@ -1,7 +1,7 @@
 buffer = 10000000
 br = peripheral.wrap(DonWrap.wrap(DonWrapList.reactor))
 rednet.open(DonWrap.wrap(DonWrapList.modem))
-print("Reactor Control V2 By DonF")
+print("Reactor Control V3 By DonF")
 shell.run("DonOS/Computer/Reactor/turnOff")
 
 

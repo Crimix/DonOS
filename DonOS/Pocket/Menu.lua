@@ -7,7 +7,7 @@ function reactor()
 	dataListM["rId"] = "reactor"
 	dataListM["msg"] = "toggle"
 	msg = textutils.serialize(dataListM)
-	rednet.send(DonRednetRef.sat,msg)
+	rednet.send(satId,msg)
 end
 function update()
 	shell.run("DonOS/update")

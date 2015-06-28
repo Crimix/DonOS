@@ -1,5 +1,5 @@
 rednet.open(DonWrap.wrap(DonWrapList.modem))
-print("Main V1 By DonF")
+print("Main V2 By DonF")
 local list ={}
 local dataList ={}
 local satId
